@@ -24,7 +24,7 @@ st.write('The name on your Smoothie will be:', name_on_order)
 #title = st.text_input('Movie title', 'Life of Brian')
 #st.write('The current movie title is', title)
 cnx = st.connection("snowflake")
-session = cnx.session # get_active_session()
+session = cnx.session() # get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
